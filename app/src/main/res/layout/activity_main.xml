@@ -6,37 +6,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/bluebackground"
     android:gravity="center"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:orientation="vertical"
+        android:gravity="top|center"
+        android:layout_gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHECK KHODAM"
-        android:textSize="30dp"
-        android:textColor="@color/black"
+        android:text="RizzApp"
+        android:textSize="45dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/bluebutton"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"/>
 
-    <EditText
-        android:layout_width="350dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Input your name"
-        android:id="@+id/inputName"
+        android:text="Check Khodam"
+        android:textSize="40dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/cat"/>
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Name And Check The Khodam Inside You"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:textStyle="bold"/>
+        android:layout_marginBottom="20dp"
+        android:textSize="40dp"
+        android:id="@+id/resultText"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="340dp"
+            android:layout_height="70dp"
+            android:textSize="25dp"
+            android:hint="Input your name"
+            android:layout_marginTop="20dp"
+            android:id="@+id/inputName"
+            android:background="@color/white"
+            android:textStyle="bold"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/generateButton"
-        android:layout_marginTop="30dp"
-        android:text="CHECK"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/resultText"/>
+        android:background="@drawable/btncheck"
+        android:layout_marginTop="10dp"
+        android:text="CHECK KHODAM"/>
 
 </LinearLayout>
