@@ -50,24 +50,17 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:text="Enter Your Name And Check The Khodam Inside You"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="35dp"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="40dp"
-        android:id="@+id/resultText"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="35dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp">

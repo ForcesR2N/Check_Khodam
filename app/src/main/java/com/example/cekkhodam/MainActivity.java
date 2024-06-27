@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText inputName;
     private Button generateButton;
-    private TextView resultText;
     private View mainLayout;
 
     private String[] animals;
@@ -34,10 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         inputName = findViewById(R.id.inputName);
         generateButton = findViewById(R.id.generateButton);
-        resultText = findViewById(R.id.resultText);
         mainLayout = findViewById(R.id.main);
 
-        animals = new String[]{"Cat", "Dog", "Mouse", "Tiger", "Elephant", "Lion", "Monkey", "Giraffe", "Zebra", "Rabbit"};
+        animals = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive"};
 
         random = new Random();
 
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         String name = inputName.getText().toString().trim();
                         String result = generateResult();
-                        resultText.setText(result);
                         progressDialog.dismiss();
                         showPopupCheck(result);
                     }
@@ -74,7 +72,11 @@ public class MainActivity extends AppCompatActivity {
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
         TextView popupResultText = popupView.findViewById(R.id.resultText);
-        popupResultText.setText(result);
+        if("no_khodam".equals(result)){
+            popupResultText.setText("Skill issue, you dont even have a khodam");
+        }else{
+            popupResultText.setText(result);
+        }
 
         TextView Back;
         Back=popupView.findViewById(R.id.back);
@@ -95,7 +97,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String generateResult() {
-        int randomIndex = random.nextInt(animals.length);
-        return animals[randomIndex];
+        int randomIndex = random.nextInt(100);
+        if(randomIndex < 70){
+            randomIndex = random.nextInt(animals.length);
+            return animals[randomIndex];
+        }else {
+        return "no_khodam";
+        }
     }
 }
