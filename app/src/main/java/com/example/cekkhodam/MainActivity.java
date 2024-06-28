@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         generateButton = findViewById(R.id.generateButton);
         mainLayout = findViewById(R.id.main);
 
-        animals = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive"};
+        animals = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive", "Skibidi Toilet", "Ngabers Sigma"};
 
         random = new Random();
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String generateResult() {
         int randomIndex = random.nextInt(100);
-        if(randomIndex < 70){
+        if(randomIndex < 50){
             randomIndex = random.nextInt(animals.length);
             return animals[randomIndex];
         }else {
