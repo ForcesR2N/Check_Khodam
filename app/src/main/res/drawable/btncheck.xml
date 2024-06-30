@@ -3,7 +3,7 @@
     <corners
         android:radius="14dp" />
     <solid
-        android:color="@color/bluebutton" />
+        android:color="@color/btnpurple" />
     <padding
         android:left="0dp"
         android:top="0dp"
