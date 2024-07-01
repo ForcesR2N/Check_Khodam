@@ -50,7 +50,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:text="Enter Your Name And Check The Khodam Inside You"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="15dp"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -58,7 +58,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="340dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginBottom="10dp"
@@ -70,11 +70,11 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="340dp"
-            android:layout_height="70dp"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
             android:textSize="25dp"
+            android:fontFamily="sans-serif-light"
             android:hint="Input your name"
-            android:layout_marginTop="20dp"
             android:id="@+id/inputName"
             android:background="@color/white"
             android:textStyle="bold"/>
