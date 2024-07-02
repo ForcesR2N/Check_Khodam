@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-50dp"
         android:orientation="vertical"
         android:gravity="center"
         android:layout_gravity="center">
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="Check Khodam"
         android:textSize="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="23dp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"/>
@@ -41,13 +41,13 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/cat"/>
 
     <TextView
-        android:layout_width="280dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:text="Enter Your Name And Check The Khodam Inside You"
         android:layout_marginBottom="15dp"
@@ -72,7 +72,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:fontFamily="sans-serif-light"
             android:hint="Input your name"
             android:id="@+id/inputName"
