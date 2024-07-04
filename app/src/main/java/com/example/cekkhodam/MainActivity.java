@@ -1,8 +1,6 @@
 package com.example.cekkhodam;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -17,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private Button generateButton;
     private View mainLayout;
 
-    private String[] animals;
+    private String[] khodam;
     private Random random;
     private ProgressDialog progressDialog;
+    private HashMap<String, String> resultMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         generateButton = findViewById(R.id.generateButton);
         mainLayout = findViewById(R.id.main);
 
-        animals = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive", "Skibidi Toilet", "Ngabers Sigma"};
+        khodam = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive", "Skibidi Toilet", "Ngabers Sigma"};
 
         random = new Random();
+        resultMap = new HashMap<>();
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
@@ -59,7 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        String result = generateResult();
+                        String result;
+                        if(resultMap.containsKey(name)) {
+                            result = resultMap.get(name);
+                        } else {
+                            result = generateResult();
+                            resultMap.put(name, result);
+                        }
                         progressDialog.dismiss();
                         showPopupCheck(name, result);
                     }
@@ -106,8 +113,8 @@ public class MainActivity extends AppCompatActivity {
     private String generateResult() {
         int randomIndex = random.nextInt(100);
         if (randomIndex < 50) {
-            randomIndex = random.nextInt(animals.length);
-            return animals[randomIndex];
+            randomIndex = random.nextInt(khodam.length);
+            return khodam[randomIndex];
         } else {
             return "no_khodam";
         }
