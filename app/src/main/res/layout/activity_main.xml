@@ -18,33 +18,37 @@
         android:gravity="center"
         android:layout_gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RizzApp"
-        android:textSize="45dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/btnpurple"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"/>
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RizzApp"
+            android:textSize="45dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/btnpurple"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check Khodam"
-        android:textSize="40dp"
-        android:layout_marginBottom="23dp"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif-smallcaps"
-        android:gravity="center"/>
+        <TextView
+            android:id="@+id/subtitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Khodam"
+            android:textSize="40dp"
+            android:layout_marginBottom="23dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"/>
 
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/cat"/>
+        android:src="@drawable/cat"
+        android:contentDescription="Cat Image"/>
 
     <TextView
         android:layout_width="260dp"
@@ -56,7 +60,6 @@
         android:textColor="@color/white"
         android:gravity="center"/>
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,20 +68,21 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="320dp"
-            android:layout_height="60dp"
-            android:textSize="23dp"
-            android:fontFamily="sans-serif-light"
-            android:hint="Input your name"
-            android:id="@+id/inputName"
-            android:background="@color/white"
-            android:textStyle="bold"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:textSize="23dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="Input your name"
+                android:id="@+id/inputName"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:textStyle="bold"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -89,6 +93,7 @@
         android:background="@drawable/btncheck"
         app:backgroundTint="@color/btnpurple"
         android:layout_marginTop="10dp"
-        android:text="CHECK KHODAM"/>
+        android:text="CHECK KHODAM"
+        android:textColor="@color/white"/>
 
 </LinearLayout>

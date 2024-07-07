@@ -7,8 +7,11 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,22 +24,36 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private EditText inputName;
-    private Button generateButton;
     private View mainLayout;
+    private TextView titleTextView, subtitleTextView;
+    private ImageView imageView;
+    private Button generateButton;
 
     private String[] khodam;
     private Random random;
     private ProgressDialog progressDialog;
     private HashMap<String, String> resultMap;
+    private Animation fadeInAnimation, slideInAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inputName = findViewById(R.id.inputName);
+        titleTextView = findViewById(R.id.titleTextView);
+        subtitleTextView = findViewById(R.id.subtitleTextView);
+        imageView = findViewById(R.id.imageView);
         generateButton = findViewById(R.id.generateButton);
+        inputName = findViewById(R.id.inputName);
         mainLayout = findViewById(R.id.main);
+
+        fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        slideInAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_bottom);
+
+        titleTextView.startAnimation(fadeInAnimation);
+        subtitleTextView.startAnimation(fadeInAnimation);
+        imageView.startAnimation(slideInAnimation);
+        generateButton.startAnimation(slideInAnimation);
 
         khodam = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive", "Skibidi Toilet", "Ngabers Sigma"};
 
