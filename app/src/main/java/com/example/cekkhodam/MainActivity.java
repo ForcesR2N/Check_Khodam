@@ -25,35 +25,22 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText inputName;
     private View mainLayout;
-    private TextView titleTextView, subtitleTextView;
-    private ImageView imageView;
     private Button generateButton;
 
     private String[] khodam;
     private Random random;
     private ProgressDialog progressDialog;
     private HashMap<String, String> resultMap;
-    private Animation fadeInAnimation, slideInAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        titleTextView = findViewById(R.id.titleTextView);
-        subtitleTextView = findViewById(R.id.subtitleTextView);
-        imageView = findViewById(R.id.imageView);
         generateButton = findViewById(R.id.generateButton);
         inputName = findViewById(R.id.inputName);
         mainLayout = findViewById(R.id.main);
 
-        fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        slideInAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_bottom);
-
-        titleTextView.startAnimation(fadeInAnimation);
-        subtitleTextView.startAnimation(fadeInAnimation);
-        imageView.startAnimation(slideInAnimation);
-        generateButton.startAnimation(slideInAnimation);
 
         khodam = new String[]{"Boomer Menkominfo", "Gen Z Icikiwir", "Alok", "Pedo Blue Archive", "Skibidi Toilet", "Ngabers Sigma"};
 

@@ -19,7 +19,6 @@
         android:layout_gravity="center">
 
         <TextView
-            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RizzApp"
@@ -30,7 +29,6 @@
             android:gravity="center"/>
 
         <TextView
-            android:id="@+id/subtitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Check Khodam"
